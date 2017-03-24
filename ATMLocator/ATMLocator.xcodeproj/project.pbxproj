@@ -48,6 +48,7 @@
 		869EBBD01E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
 		869EBBD11E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
 		869EBBD21E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
+		86B2DC8C1E859305005DF1D6 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B2DC8B1E859305005DF1D6 /* ConnectionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		86B2DC881E8590F4005DF1D6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		40B9FBE2CC5E06C6EEAE56E7 /* Pods-ATMLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMLocator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATMLocator/Pods-ATMLocator.release.xcconfig"; sourceTree = "<group>"; };
+		485EA19C4BC4198D36176942 /* Pods-ATMLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMLocator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATMLocator/Pods-ATMLocator.debug.xcconfig"; sourceTree = "<group>"; };
 		4ADFB6E6381602B6C15B7BB1 /* Pods_ATMLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATMLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		869083BB1E850C280053B5AE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Network/Reachability.h; sourceTree = "<group>"; };
 		869083BC1E850C280053B5AE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Network/Reachability.m; sourceTree = "<group>"; };
@@ -108,6 +124,8 @@
 		869EBBCA1E84F79C007A608B /* ALDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDetailViewController.m; path = Controller/ALDetailViewController.m; sourceTree = "<group>"; };
 		869EBBCE1E84F7C3007A608B /* ALDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDetailViewCell.h; path = View/CustomCell/ALDetailViewCell.h; sourceTree = "<group>"; };
 		869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDetailViewCell.m; path = View/CustomCell/ALDetailViewCell.m; sourceTree = "<group>"; };
+		86B2DC8A1E859305005DF1D6 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = Manager/ConnectionManager.h; sourceTree = "<group>"; };
+		86B2DC8B1E859305005DF1D6 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = Manager/ConnectionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +159,8 @@
 		650F6889BE30D8B4C80529AB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				485EA19C4BC4198D36176942 /* Pods-ATMLocator.debug.xcconfig */,
+				40B9FBE2CC5E06C6EEAE56E7 /* Pods-ATMLocator.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -266,6 +286,8 @@
 		869EBB8A1E84F049007A608B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				86B2DC8A1E859305005DF1D6 /* ConnectionManager.h */,
+				86B2DC8B1E859305005DF1D6 /* ConnectionManager.m */,
 				869EBB981E84F397007A608B /* ALLocationManager.h */,
 				869EBB991E84F397007A608B /* ALLocationManager.m */,
 				869EBB9D1E84F3BB007A608B /* ALAPIManager.h */,
@@ -317,6 +339,7 @@
 				869EBB4E1E84EF20007A608B /* Resources */,
 				A51694880D618E1BD9466A74 /* [CP] Embed Pods Frameworks */,
 				106ECE73F711B9172C60ACE6 /* [CP] Copy Pods Resources */,
+				86B2DC881E8590F4005DF1D6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -491,6 +514,7 @@
 				869EBB581E84EF20007A608B /* AppDelegate.m in Sources */,
 				869EBB551E84EF20007A608B /* main.m in Sources */,
 				869EBBAE1E84F573007A608B /* ALAppUtility.m in Sources */,
+				86B2DC8C1E859305005DF1D6 /* ConnectionManager.m in Sources */,
 				869EBBA41E84F3E1007A608B /* ALStoryboardManager.m in Sources */,
 				869EBB9A1E84F397007A608B /* ALLocationManager.m in Sources */,
 				869EBBCB1E84F79C007A608B /* ALDetailViewController.m in Sources */,
@@ -657,6 +681,7 @@
 		};
 		869EBB7E1E84EF20007A608B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 485EA19C4BC4198D36176942 /* Pods-ATMLocator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Manish Patil (ZE6K664A4D)";
@@ -672,6 +697,7 @@
 		};
 		869EBB7F1E84EF20007A608B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40B9FBE2CC5E06C6EEAE56E7 /* Pods-ATMLocator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Manish Patil (ZE6K664A4D)";
