@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		869EBB551E84EF20007A608B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBB541E84EF20007A608B /* main.m */; };
+		869EBB581E84EF20007A608B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBB571E84EF20007A608B /* AppDelegate.m */; };
+		869EBB5B1E84EF20007A608B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBB5A1E84EF20007A608B /* ViewController.m */; };
+		869EBB5E1E84EF20007A608B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869EBB5C1E84EF20007A608B /* Main.storyboard */; };
+		869EBB601E84EF20007A608B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869EBB5F1E84EF20007A608B /* Assets.xcassets */; };
+		869EBB631E84EF20007A608B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869EBB611E84EF20007A608B /* LaunchScreen.storyboard */; };
+		869EBB6E1E84EF20007A608B /* ATMLocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBB6D1E84EF20007A608B /* ATMLocatorTests.m */; };
+		869EBB791E84EF20007A608B /* ATMLocatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBB781E84EF20007A608B /* ATMLocatorUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		869EBB6A1E84EF20007A608B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 869EBB481E84EF20007A608B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 869EBB4F1E84EF20007A608B;
+			remoteInfo = ATMLocator;
+		};
+		869EBB751E84EF20007A608B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 869EBB481E84EF20007A608B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 869EBB4F1E84EF20007A608B;
+			remoteInfo = ATMLocator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		869EBB501E84EF20007A608B /* ATMLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		869EBB541E84EF20007A608B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		869EBB561E84EF20007A608B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		869EBB571E84EF20007A608B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		869EBB591E84EF20007A608B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		869EBB5A1E84EF20007A608B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		869EBB5D1E84EF20007A608B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		869EBB5F1E84EF20007A608B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		869EBB621E84EF20007A608B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		869EBB641E84EF20007A608B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869EBB691E84EF20007A608B /* ATMLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATMLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		869EBB6D1E84EF20007A608B /* ATMLocatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMLocatorTests.m; sourceTree = "<group>"; };
+		869EBB6F1E84EF20007A608B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869EBB741E84EF20007A608B /* ATMLocatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATMLocatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		869EBB781E84EF20007A608B /* ATMLocatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMLocatorUITests.m; sourceTree = "<group>"; };
+		869EBB7A1E84EF20007A608B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		869EBB4D1E84EF20007A608B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869EBB661E84EF20007A608B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869EBB711E84EF20007A608B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		869EBB471E84EF20007A608B = {
+			isa = PBXGroup;
+			children = (
+				869EBB521E84EF20007A608B /* ATMLocator */,
+				869EBB6C1E84EF20007A608B /* ATMLocatorTests */,
+				869EBB771E84EF20007A608B /* ATMLocatorUITests */,
+				869EBB511E84EF20007A608B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		869EBB511E84EF20007A608B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				869EBB501E84EF20007A608B /* ATMLocator.app */,
+				869EBB691E84EF20007A608B /* ATMLocatorTests.xctest */,
+				869EBB741E84EF20007A608B /* ATMLocatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		869EBB521E84EF20007A608B /* ATMLocator */ = {
+			isa = PBXGroup;
+			children = (
+				869EBB561E84EF20007A608B /* AppDelegate.h */,
+				869EBB571E84EF20007A608B /* AppDelegate.m */,
+				869EBB591E84EF20007A608B /* ViewController.h */,
+				869EBB5A1E84EF20007A608B /* ViewController.m */,
+				869EBB5C1E84EF20007A608B /* Main.storyboard */,
+				869EBB5F1E84EF20007A608B /* Assets.xcassets */,
+				869EBB611E84EF20007A608B /* LaunchScreen.storyboard */,
+				869EBB641E84EF20007A608B /* Info.plist */,
+				869EBB531E84EF20007A608B /* Supporting Files */,
+			);
+			path = ATMLocator;
+			sourceTree = "<group>";
+		};
+		869EBB531E84EF20007A608B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				869EBB541E84EF20007A608B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		869EBB6C1E84EF20007A608B /* ATMLocatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				869EBB6D1E84EF20007A608B /* ATMLocatorTests.m */,
+				869EBB6F1E84EF20007A608B /* Info.plist */,
+			);
+			path = ATMLocatorTests;
+			sourceTree = "<group>";
+		};
+		869EBB771E84EF20007A608B /* ATMLocatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				869EBB781E84EF20007A608B /* ATMLocatorUITests.m */,
+				869EBB7A1E84EF20007A608B /* Info.plist */,
+			);
+			path = ATMLocatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		869EBB4F1E84EF20007A608B /* ATMLocator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869EBB7D1E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocator" */;
+			buildPhases = (
+				869EBB4C1E84EF20007A608B /* Sources */,
+				869EBB4D1E84EF20007A608B /* Frameworks */,
+				869EBB4E1E84EF20007A608B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATMLocator;
+			productName = ATMLocator;
+			productReference = 869EBB501E84EF20007A608B /* ATMLocator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		869EBB681E84EF20007A608B /* ATMLocatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869EBB801E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocatorTests" */;
+			buildPhases = (
+				869EBB651E84EF20007A608B /* Sources */,
+				869EBB661E84EF20007A608B /* Frameworks */,
+				869EBB671E84EF20007A608B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				869EBB6B1E84EF20007A608B /* PBXTargetDependency */,
+			);
+			name = ATMLocatorTests;
+			productName = ATMLocatorTests;
+			productReference = 869EBB691E84EF20007A608B /* ATMLocatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		869EBB731E84EF20007A608B /* ATMLocatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869EBB831E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocatorUITests" */;
+			buildPhases = (
+				869EBB701E84EF20007A608B /* Sources */,
+				869EBB711E84EF20007A608B /* Frameworks */,
+				869EBB721E84EF20007A608B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				869EBB761E84EF20007A608B /* PBXTargetDependency */,
+			);
+			name = ATMLocatorUITests;
+			productName = ATMLocatorUITests;
+			productReference = 869EBB741E84EF20007A608B /* ATMLocatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		869EBB481E84EF20007A608B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Zensar;
+				TargetAttributes = {
+					869EBB4F1E84EF20007A608B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					869EBB681E84EF20007A608B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 869EBB4F1E84EF20007A608B;
+					};
+					869EBB731E84EF20007A608B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 869EBB4F1E84EF20007A608B;
+					};
+				};
+			};
+			buildConfigurationList = 869EBB4B1E84EF20007A608B /* Build configuration list for PBXProject "ATMLocator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 869EBB471E84EF20007A608B;
+			productRefGroup = 869EBB511E84EF20007A608B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				869EBB4F1E84EF20007A608B /* ATMLocator */,
+				869EBB681E84EF20007A608B /* ATMLocatorTests */,
+				869EBB731E84EF20007A608B /* ATMLocatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		869EBB4E1E84EF20007A608B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869EBB631E84EF20007A608B /* LaunchScreen.storyboard in Resources */,
+				869EBB601E84EF20007A608B /* Assets.xcassets in Resources */,
+				869EBB5E1E84EF20007A608B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869EBB671E84EF20007A608B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869EBB721E84EF20007A608B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		869EBB4C1E84EF20007A608B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869EBB5B1E84EF20007A608B /* ViewController.m in Sources */,
+				869EBB581E84EF20007A608B /* AppDelegate.m in Sources */,
+				869EBB551E84EF20007A608B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869EBB651E84EF20007A608B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869EBB6E1E84EF20007A608B /* ATMLocatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869EBB701E84EF20007A608B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869EBB791E84EF20007A608B /* ATMLocatorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		869EBB6B1E84EF20007A608B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 869EBB4F1E84EF20007A608B /* ATMLocator */;
+			targetProxy = 869EBB6A1E84EF20007A608B /* PBXContainerItemProxy */;
+		};
+		869EBB761E84EF20007A608B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 869EBB4F1E84EF20007A608B /* ATMLocator */;
+			targetProxy = 869EBB751E84EF20007A608B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		869EBB5C1E84EF20007A608B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869EBB5D1E84EF20007A608B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		869EBB611E84EF20007A608B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869EBB621E84EF20007A608B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		869EBB7B1E84EF20007A608B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		869EBB7C1E84EF20007A608B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		869EBB7E1E84EF20007A608B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ATMLocator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcs.ATMLocator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		869EBB7F1E84EF20007A608B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ATMLocator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcs.ATMLocator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		869EBB811E84EF20007A608B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ATMLocatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcs.ATMLocatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATMLocator.app/ATMLocator";
+			};
+			name = Debug;
+		};
+		869EBB821E84EF20007A608B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ATMLocatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcs.ATMLocatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATMLocator.app/ATMLocator";
+			};
+			name = Release;
+		};
+		869EBB841E84EF20007A608B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ATMLocatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcs.ATMLocatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ATMLocator;
+			};
+			name = Debug;
+		};
+		869EBB851E84EF20007A608B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ATMLocatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcs.ATMLocatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ATMLocator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		869EBB4B1E84EF20007A608B /* Build configuration list for PBXProject "ATMLocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869EBB7B1E84EF20007A608B /* Debug */,
+				869EBB7C1E84EF20007A608B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		869EBB7D1E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869EBB7E1E84EF20007A608B /* Debug */,
+				869EBB7F1E84EF20007A608B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		869EBB801E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869EBB811E84EF20007A608B /* Debug */,
+				869EBB821E84EF20007A608B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		869EBB831E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869EBB841E84EF20007A608B /* Debug */,
+				869EBB851E84EF20007A608B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 869EBB481E84EF20007A608B /* Project object */;
+}
