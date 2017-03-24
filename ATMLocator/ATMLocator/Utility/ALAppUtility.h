@@ -31,5 +31,6 @@
 
 // indicatorview methods
 //+ (void)showProgressViewWithStatus:(NSString *)status;
-//+ (void)dismissProgressView;
++ (void)showProgressView;
++ (void)dismissProgressView;
 @end

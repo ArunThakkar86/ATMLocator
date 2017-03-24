@@ -10,6 +10,7 @@
 #import "UIWindow+VisibleViewController.h"
 #import "Constant.h"
 #import "ALColorManager.h"
+#import "MBProgressHUD.h"
 
 @implementation ALAppUtility
 
@@ -134,11 +135,17 @@
 //    [SVProgressHUD showWithStatus:status];
 //}
 
-//+ (void)dismissProgressView {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [SVProgressHUD dismiss];
-//    });
-//}
++ (void)showProgressView{
+    UIViewController *mainController = [UIWindow visibleViewController];
+     [MBProgressHUD showHUDAddedTo:mainController.view animated:YES];
+}
+
++ (void)dismissProgressView {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIViewController *mainController = [UIWindow visibleViewController];
+        [MBProgressHUD hideHUDForView:mainController.view animated:YES];
+    });
+}
 
 
 @end

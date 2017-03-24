@@ -32,7 +32,8 @@
 }
 
 - (void)getATMListFromServer{
-    //[ALAppUtility showProgressViewWithStatus:@"Finding..."];
+    
+    [ALAppUtility showProgressView];
     [ALAPIManager getStoreListCompletion:^(NSArray *locationArray) {
         if(locationArray.count >0){
             atmList = locationArray;
@@ -63,7 +64,7 @@
             [_mapView addAnnotation:marker];
         }
     }
-    //[ALAppUtility dismissProgressView];
+    [ALAppUtility dismissProgressView];
     
 }
 
@@ -111,30 +112,20 @@
     return pinView;
 }
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
-    //[ALAppUtility showProgressViewWithStatus:@"Loading..."];
-    id <MKAnnotation> selectedMarker = view.annotation;
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", selectedMarker.title];
-    NSArray *results = [atmList filteredArrayUsingPredicate:predicate];
-    if(results.count > 0){
-        
-        
-        ALDetailViewController *viewController = (ALDetailViewController *)[ALStoryboardManager storyboardWithName:@"Main" getViewControllerWithIdentifier:@"StoreDetailView"];
-        viewController.selectedATM = [results objectAtIndex:0];
-        [self.navigationController pushViewController:viewController animated:YES];
-        
-    }
     
-    
-    
-}
+    dispatch_async(dispatch_get_main_queue(), ^{
+        id <MKAnnotation> selectedMarker = view.annotation;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", selectedMarker.title];
+        NSArray *results = [atmList filteredArrayUsingPredicate:predicate];
+        if(results.count > 0){
+            ALDetailViewController *viewController = (ALDetailViewController *)[ALStoryboardManager storyboardWithName:@"Main" getViewControllerWithIdentifier:@"StoreDetailView"];
+            viewController.selectedATM = [results objectAtIndex:0];
+            [self.navigationController pushViewController:viewController animated:YES];
+            
+        }
 
-- (void)viewDidDisappear:(BOOL)animated{
-    
-    [super viewDidDisappear:animated];
-    //[ALAppUtility dismissProgressView];
-    
+    });
 }
-
 
 
 @end
