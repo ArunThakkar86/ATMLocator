@@ -10,6 +10,10 @@
 
 @implementation ALColorManager
 
+/*---------------------------------------------------------------------------
+ * colorFromHexString
+ * This method returns instance of color from given hexadecimal value of color
+ *--------------------------------------------------------------------------*/
 + (UIColor *)colorFromHexString:(NSString *)hexString
 {
     unsigned rgbValue = 0;

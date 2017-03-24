@@ -37,6 +37,11 @@
     }
 }
 
+/*---------------------------------------------------------------------------
+ * getATMListFromServer
+ * This method invoke service call to another method to retrive 
+ * data from server
+ *--------------------------------------------------------------------------*/
 - (void)getATMListFromServer{
     
     
@@ -48,6 +53,12 @@
     }];
 }
 
+/*---------------------------------------------------------------------------
+ * setupMapUI
+ * This method invokes method to set up initial MAP 
+ * and initializind Core Location
+ *--------------------------------------------------------------------------*/
+
 - (void)setupMapUI {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self setupMap];
@@ -55,6 +66,12 @@
         
     });
 }
+
+/*---------------------------------------------------------------------------
+ * setupMap
+ * This method is used to map latitude and longitude of all ATM / brance data
+ * coming from server and place markers.
+ *--------------------------------------------------------------------------*/
 
 - (void)setupMap{
     if(atmList.count >0){
@@ -74,6 +91,10 @@
     
 }
 
+/*---------------------------------------------------------------------------
+ * setupLocationManager
+ * This method is used set region and span of Map (i.e. Zoom Level)
+ *--------------------------------------------------------------------------*/
 - (void)setupLocationManager{
     [[ALLocationManager sharedInstance] getCurrentLocation_WithBlock:^{
         
@@ -89,18 +110,14 @@
         
     }];
 }
+
+
+/*---------------------------------------------------------------------------
+ * viewForAnnotation
+ * This is delegate method to set view for marker (i.e to customize markers)
+ *--------------------------------------------------------------------------*/
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation{
     
-//    MKPinAnnotationView *mypin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"current"];
-//    //mypin.pinTintColor = MKPinAnnotationColorGreen;
-//    mypin.backgroundColor = [UIColor clearColor];
-//    UIButton *goToDetail = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//    mypin.rightCalloutAccessoryView = goToDetail;
-//    mypin.draggable = NO;
-//    mypin.highlighted = YES;
-//    mypin.animatesDrop = TRUE;
-//    mypin.canShowCallout = YES;
-//    return mypin;
     static NSString *atmLocator = @"ATMLocatorIdentifier";
     MKPinAnnotationView *pinView =
     (MKPinAnnotationView *)[_mapView dequeueReusableAnnotationViewWithIdentifier:atmLocator];
@@ -114,9 +131,6 @@
                                                                         reuseIdentifier:atmLocator];
         UIImage *flagImage = [UIImage imageNamed:@"mapMarker"];
         annotationView.image = flagImage;
-//        UIButton * rightButton = [[UIButton alloc ] initWithFrame:CGRectMake(0, 0, 47, 47)];
-//        [rightButton setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
-        
         annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         annotationView.canShowCallout = YES;
         return annotationView;
@@ -127,20 +141,22 @@
     }
     return pinView;
 }
+
+/*---------------------------------------------------------------------------
+ * calloutAccessoryControlTapped
+ * This is delegate method and called when user taps on markers.
+ *--------------------------------------------------------------------------*/
+
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [ALAppUtility showProgressView];
     });
         id <MKAnnotation> selectedMarker = view.annotation;
-//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", selectedMarker.title];
-//        NSArray *results = [atmList filteredArrayUsingPredicate:predicate];
-//        if(results.count > 0){
             ALDetailViewController *viewController = (ALDetailViewController *)[ALStoryboardManager storyboardWithName:@"Main" getViewControllerWithIdentifier:@"StoreDetailView"];
-            viewController.selectedMarker = selectedMarker;//[results objectAtIndex:0];
+            viewController.selectedMarker = selectedMarker;
             viewController.atmList = atmList;
             [self.navigationController pushViewController:viewController animated:YES];
-//        }
 }
 
 

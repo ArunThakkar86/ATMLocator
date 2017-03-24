@@ -34,11 +34,15 @@ typedef enum : NSUInteger {
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
-    [self getSelectedObject];
+    [self getSelectedBranchOrATM];
     
 }
 
-- (void)getSelectedObject{
+/*---------------------------------------------------------------------------
+ * getSelectedBranchOrATM
+ * This method retrives details of selected branch (When you tap on marker)
+ *--------------------------------------------------------------------------*/
+- (void)getSelectedBranchOrATM{
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", _selectedMarker.title];
         NSArray *results = [_atmList filteredArrayUsingPredicate:predicate];
@@ -65,6 +69,11 @@ typedef enum : NSUInteger {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
+
+/*---------------------------------------------------------------------------
+ * cellForRowAtIndexPath
+ * This method infact render Branch / ATM / Store detail UI.
+ *--------------------------------------------------------------------------*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = nil;
@@ -111,16 +120,15 @@ typedef enum : NSUInteger {
     } else if (indexPath.section == StoreContactSec) {
         return 60.0f;
     } else if (indexPath.section == StoreBranchTimingSec) {
-        return 180.0f; //110.0f;
+        return 180.0f;
     } else if (indexPath.section == StoreServiceSec) {
-        return 170.0f; // amenities + header
+        return 170.0f;
     }
     return 44.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    //    if (section == StoreAmenitiesSec)
-    //        return 0.01f;
+
     return 2.0f;
 }
 
@@ -134,8 +142,12 @@ typedef enum : NSUInteger {
         }
     }
 }
-//#pragma mark - store contact -
-//
+
+/*---------------------------------------------------------------------------
+ * phoneAction
+ * This method called when user taps on Phone Number of Branch / ATM
+ *--------------------------------------------------------------------------*/
+
 - (void)phoneAction {
     UIAlertController *alertController = [UIAlertController  alertControllerWithTitle:@"ATM Locator"  message:@"Please click one number to make a call"  preferredStyle:UIAlertControllerStyleActionSheet];
     

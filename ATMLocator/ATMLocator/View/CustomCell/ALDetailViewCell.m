@@ -13,6 +13,12 @@
 @end
 
 @implementation StoreBasicDetailCell
+
+/*---------------------------------------------------------------------------
+ * setStoreBasicDetailCellWithStoreData
+ * This method set basic details (i.e Name, Address, City, State, Zip).
+ *--------------------------------------------------------------------------*/
+
 - (void)setStoreBasicDetailCellWithStoreData:(ALATMInfo *)storeLocatorObj{
     _lblStoreName.text = storeLocatorObj.name;
     _lblAddress.text = storeLocatorObj.address;
@@ -22,7 +28,14 @@
 
 @end
 
+
 @implementation StoreContactCell
+
+/*---------------------------------------------------------------------------
+ * setStoreContactCellWithStoreData
+ * This method set contact details (Phone Number).
+ *--------------------------------------------------------------------------*/
+
 - (void)setStoreContactCellWithStoreData:(ALATMInfo *)storeLocatorObj{
     _lblContact.text = storeLocatorObj.phone;
 }
@@ -30,6 +43,12 @@
 @end
 
 @implementation StoreBranchTimingCell
+
+/*---------------------------------------------------------------------------
+ * setStoreBranchTimingCellWithStoreData
+ * This method set Branch Timing details (Lobby and Drive up hours).
+ *--------------------------------------------------------------------------*/
+
 - (void)setStoreBranchTimingCellWithStoreData:(ALATMInfo *)storeLocatorObj {
     NSArray *arrayLobbyHrs = storeLocatorObj.lobbyHrs;
     if(arrayLobbyHrs.count >0 && arrayLobbyHrs.count ==7){
@@ -56,6 +75,12 @@
 @end
 
 @implementation StoreServiceCell
+
+/*---------------------------------------------------------------------------
+ * setStoreServiceCellWithStoreData
+ * This method set service details.
+ *--------------------------------------------------------------------------*/
+
 - (void)setStoreServiceCellWithStoreData:(ALATMInfo *)storeLocatorObj {
     
     NSArray *arrayService = storeLocatorObj.services;

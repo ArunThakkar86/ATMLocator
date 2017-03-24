@@ -10,6 +10,10 @@
 #import "Constant.h"
 @implementation ALLocationManager
 
+/*---------------------------------------------------------------------------
+ * sharedInstance
+ * This method is used to create shared instanceof ALLocationManager
+ *--------------------------------------------------------------------------*/
 + (ALLocationManager *)sharedInstance {
     
     static dispatch_once_t onceToken;
@@ -24,6 +28,11 @@
 + (id) alloc {
     return [self sharedInstance];
 }
+
+/*---------------------------------------------------------------------------
+ * getCurrentLocation_WithBlock
+ * This method is used to retrive user's current location
+ *--------------------------------------------------------------------------*/
 
 #pragma mark - CLLocationManager
 - (void)getCurrentLocation_WithBlock:(void(^)())block {
@@ -41,6 +50,10 @@
     [_locationManager startUpdatingLocation];
 }
 
+
+/*---------------------------------------------------------------------------
+ * This method is delegate method of CLLocation Manager.
+ *--------------------------------------------------------------------------*/
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation *currentLoc = [locations objectAtIndex:0];
     _coordinate = currentLoc.coordinate;
@@ -52,6 +65,9 @@
     _locationManager = nil;
 }
 
+/*---------------------------------------------------------------------------
+ * This method is delegate method of CLLocation Manager.
+ *--------------------------------------------------------------------------*/
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error {
 }

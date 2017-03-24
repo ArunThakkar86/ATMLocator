@@ -14,6 +14,11 @@
 
 @implementation ALAppUtility
 
+/*---------------------------------------------------------------------------
+ * sharedInstance
+ * This method returns sharedInstance ALAppUtility
+ *--------------------------------------------------------------------------*/
+
 + (ALAppUtility *)sharedInstance {
     
     static dispatch_once_t onceToken;
@@ -29,6 +34,10 @@
     return [self sharedInstance];
 }
 
+/*---------------------------------------------------------------------------
+ * sharedInstance
+ * This method returns instance of UITableViewCell for selected identifier
+ *--------------------------------------------------------------------------*/
 
 + (UITableViewCell *)tableView:(UITableView *)tableView cellWithIdentifier:(NSString *)cellIdentifier indexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
@@ -38,6 +47,11 @@
     
     return cell;
 }
+
+/*---------------------------------------------------------------------------
+ * callTo
+ * This method is used to make call to clicked number
+ *--------------------------------------------------------------------------*/
 
 + (void) callTo:(NSString *)aTelNumber {
     UIDevice *device = [UIDevice currentDevice];
@@ -122,23 +136,21 @@
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 }
 
-#pragma mark - SVProgressHUD methods -
+#pragma mark - MBProgressHUD methods -
 
-//+ (void)showProgressViewWithStatus:(NSString *)status {
-//    // initial setup
-//    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
-//    //[SVProgressHUD setForegroundColor:[ALColorManager blueColor]];
-//    //[SVProgressHUD setBackgroundColor:kDEFAULT_CLEAR_COLOR];
-//    //[SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
-//    //[SVProgressHUD show];
-//    // show indicator with status message
-//    [SVProgressHUD showWithStatus:status];
-//}
-
+/*---------------------------------------------------------------------------
+ * showProgressView
+ * This method is used to show loading indicator
+ *--------------------------------------------------------------------------*/
 + (void)showProgressView{
     UIViewController *mainController = [UIWindow visibleViewController];
      [MBProgressHUD showHUDAddedTo:mainController.view animated:YES];
 }
+
+/*---------------------------------------------------------------------------
+ * dismissProgressView
+ * This method is used to dismiss loading indicator
+ *--------------------------------------------------------------------------*/
 
 + (void)dismissProgressView {
     dispatch_async(dispatch_get_main_queue(), ^{

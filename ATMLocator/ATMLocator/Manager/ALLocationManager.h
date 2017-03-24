@@ -6,6 +6,8 @@
 //  Copyright © 2017 Zensar. All rights reserved.
 //
 
+
+
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
@@ -20,9 +22,10 @@ typedef void(^locationBlock)();
 @property (nonatomic, strong) NSString *current_Lat;
 @property (nonatomic, strong) NSString *current_Long;
 
+// singleton instance
 + (ALLocationManager *)sharedInstance;
 
-//Location
+// to retrive user's current location
 - (void)getCurrentLocation_WithBlock:(void(^)())block;
 
 @end

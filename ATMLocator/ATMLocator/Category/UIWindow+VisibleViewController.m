@@ -1,11 +1,10 @@
 //
-//  UIWindow+VisibleViewController.m
-//  Nakumatt
+//  ALLocationManager.m
+//  ATMLocator
 //
-//  Created by Manish Patil on 20/07/16.
-//  Copyright © 2016 Zensar Technologies Pvt Ltd. All rights reserved.
+//  Created by Zensar on 24/03/17.
+//  Copyright © 2017 Zensar. All rights reserved.
 //
-
 #import "UIWindow+VisibleViewController.h"
 
 @implementation UIWindow (VisibleViewController)
