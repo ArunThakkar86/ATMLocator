@@ -7,7 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ALLocationManager : NSObject
+//Location
+typedef void(^locationBlock)();
+
+@interface ALLocationManager : NSObject<CLLocationManagerDelegate>
+
+@property (nonatomic, strong) locationBlock _locationBlock;
+@property (nonatomic, copy) CLLocationManager *locationManager;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (nonatomic, strong) NSString *current_Lat;
+@property (nonatomic, strong) NSString *current_Long;
+
++ (ALLocationManager *)sharedInstance;
+
+//Location
+- (void)getCurrentLocation_WithBlock:(void(^)())block;
 
 @end

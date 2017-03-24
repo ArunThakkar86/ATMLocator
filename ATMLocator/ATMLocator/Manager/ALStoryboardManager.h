@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface ALStoryboardManager : NSObject
 
++ (UIStoryboard *)storyboardWithName:(NSString *)storyboardName;
+
++ (UIViewController *)storyboardWithName:(NSString *)storyboardName getViewControllerWithIdentifier:(NSString *)identifier;
++ (UIViewController *)storyboard:(UIStoryboard *)storyboard getViewControllerWithIdentifier:(NSString *)identifier;
+
++ (UIStoryboard *)getMainStoryboard;
 @end

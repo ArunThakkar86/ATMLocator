@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ALATMInfo.h"
 
 @interface ALDetailViewController : UIViewController
+@property (strong, nonatomic) ALATMInfo *selectedATM;
+@property (nonatomic, assign) float tableHeight;
 
 @end
