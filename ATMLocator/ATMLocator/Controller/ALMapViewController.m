@@ -91,6 +91,16 @@
 }
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation{
     
+//    MKPinAnnotationView *mypin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"current"];
+//    //mypin.pinTintColor = MKPinAnnotationColorGreen;
+//    mypin.backgroundColor = [UIColor clearColor];
+//    UIButton *goToDetail = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//    mypin.rightCalloutAccessoryView = goToDetail;
+//    mypin.draggable = NO;
+//    mypin.highlighted = YES;
+//    mypin.animatesDrop = TRUE;
+//    mypin.canShowCallout = YES;
+//    return mypin;
     static NSString *atmLocator = @"ATMLocatorIdentifier";
     MKPinAnnotationView *pinView =
     (MKPinAnnotationView *)[_mapView dequeueReusableAnnotationViewWithIdentifier:atmLocator];
@@ -104,10 +114,10 @@
                                                                         reuseIdentifier:atmLocator];
         UIImage *flagImage = [UIImage imageNamed:@"mapMarker"];
         annotationView.image = flagImage;
-        UIButton * rightButton = [[UIButton alloc ] initWithFrame:CGRectMake(0, 0, 47, 47)];
-        [rightButton setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
+//        UIButton * rightButton = [[UIButton alloc ] initWithFrame:CGRectMake(0, 0, 47, 47)];
+//        [rightButton setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
         
-        annotationView.rightCalloutAccessoryView = rightButton;
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         annotationView.canShowCallout = YES;
         return annotationView;
     }
@@ -120,17 +130,17 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        id <MKAnnotation> selectedMarker = view.annotation;
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", selectedMarker.title];
-        NSArray *results = [atmList filteredArrayUsingPredicate:predicate];
-        if(results.count > 0){
-            ALDetailViewController *viewController = (ALDetailViewController *)[ALStoryboardManager storyboardWithName:@"Main" getViewControllerWithIdentifier:@"StoreDetailView"];
-            viewController.selectedATM = [results objectAtIndex:0];
-            [self.navigationController pushViewController:viewController animated:YES];
-            
-        }
-
+        [ALAppUtility showProgressView];
     });
+        id <MKAnnotation> selectedMarker = view.annotation;
+//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", selectedMarker.title];
+//        NSArray *results = [atmList filteredArrayUsingPredicate:predicate];
+//        if(results.count > 0){
+            ALDetailViewController *viewController = (ALDetailViewController *)[ALStoryboardManager storyboardWithName:@"Main" getViewControllerWithIdentifier:@"StoreDetailView"];
+            viewController.selectedMarker = selectedMarker;//[results objectAtIndex:0];
+            viewController.atmList = atmList;
+            [self.navigationController pushViewController:viewController animated:YES];
+//        }
 }
 
 

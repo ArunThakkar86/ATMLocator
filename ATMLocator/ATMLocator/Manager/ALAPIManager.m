@@ -21,8 +21,8 @@
     [ALAppUtility showProgressView];
     [[ALLocationManager sharedInstance] getCurrentLocation_WithBlock:^{
         NSString *url = @"";
-        NSString *current_lat = [ALLocationManager sharedInstance].current_Lat;
-        NSString *current_long = [ALLocationManager sharedInstance].current_Long;
+        NSString *current_lat = @"40.147864";//[ALLocationManager sharedInstance].current_Lat;
+        NSString *current_long = @"-82.990959";//[ALLocationManager sharedInstance].current_Long;
         url = [NSString stringWithFormat:@"%@?lat=%@&lng=%@", kBaseURL, current_lat, current_long];
         [ConnectionManager sendRequestWithURLString:url indicatorMessage:@"Loading Stores..." methodType:@"POST" requestDictionary:nil completionHandler:^(NSDictionary *responseDictionary, NSError *error) {
             

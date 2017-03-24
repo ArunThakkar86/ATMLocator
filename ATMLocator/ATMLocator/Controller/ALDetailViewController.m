@@ -27,10 +27,39 @@ typedef enum : NSUInteger {
 
 @implementation ALDetailViewController
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    [self getSelectedObject];
+    
+}
+
+- (void)getSelectedObject{
+    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", _selectedMarker.title];
+        NSArray *results = [_atmList filteredArrayUsingPredicate:predicate];
+        if(results.count > 0){
+            dispatch_async( dispatch_get_main_queue(), ^{
+                _selectedATM = [results objectAtIndex:0];
+                [ALAppUtility dismissProgressView];
+                [_tblStore reloadData];
+            });
+
+        }
+    });
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    if(_selectedATM)
+        return 4;
+    else
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
