@@ -1,10 +1,6 @@
 platform :ios, '8.0'
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/ArunThakkar86/NCMPodSpecs.git'
-
 use_frameworks!
 
 target 'ATMLocator' do
   pod 'MBProgressHUD'
-  pod 'NetworkConnectionManager', :path => '~/Documents/Libraries/NetworkConnectionManager'
 end

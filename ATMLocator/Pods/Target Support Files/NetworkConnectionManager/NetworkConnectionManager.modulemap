@@ -1,6 +1,0 @@
-framework module NetworkConnectionManager {
-  umbrella header "NetworkConnectionManager-umbrella.h"
-
-  export *
-  module * { export * }
-}
