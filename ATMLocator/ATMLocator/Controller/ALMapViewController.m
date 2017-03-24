@@ -13,6 +13,7 @@
 #import "ALDetailViewController.h"
 #import "ALStoryboardManager.h"
 #import "ALAppUtility.h"
+#import "AppDelegate.h"
 
 @interface ALMapViewController(){
     
@@ -27,13 +28,18 @@
     [super viewDidLoad];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     _mapView.showsUserLocation = YES;
-    // [self setupMapUI];
-    [self getATMListFromServer];
+    
+    if (![AppDelegate isServerReachable]) {
+        [ALAppUtility showAlertWithCheckInternetConnection];
+        return;
+    }else {
+     [self getATMListFromServer];
+    }
 }
 
 - (void)getATMListFromServer{
     
-    [ALAppUtility showProgressView];
+    
     [ALAPIManager getStoreListCompletion:^(NSArray *locationArray) {
         if(locationArray.count >0){
             atmList = locationArray;

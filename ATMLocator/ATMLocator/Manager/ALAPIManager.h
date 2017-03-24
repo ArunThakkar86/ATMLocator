@@ -10,9 +10,6 @@
 
 @interface ALAPIManager : NSObject
 
-// get current location
-+ (NSString *)getURL;
-
 // get ATM list from server
 + (void)getStoreListCompletion:(void (^) (NSArray *locationArray))completionHandler;
 

@@ -414,8 +414,8 @@
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="mnT-UV-rBz"/>
                                                             <exclude reference="Toz-DD-zsO"/>
+                                                            <exclude reference="mnT-UV-rBz"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
@@ -444,8 +444,8 @@
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="pP1-GF-7FP"/>
                                                             <exclude reference="UhZ-oc-39u"/>
+                                                            <exclude reference="pP1-GF-7FP"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
@@ -656,12 +656,12 @@
                                                 <mask key="constraints">
                                                     <exclude reference="VKw-FQ-4vs"/>
                                                     <exclude reference="mJf-I8-vjg"/>
-                                                    <exclude reference="K2N-q1-QBI"/>
                                                     <exclude reference="9zU-s4-9Jb"/>
+                                                    <exclude reference="K2N-q1-QBI"/>
                                                     <exclude reference="Rzi-vh-r89"/>
-                                                    <exclude reference="cGm-ji-mVV"/>
-                                                    <exclude reference="Oml-Hf-uaO"/>
                                                     <exclude reference="F1Q-sD-PFK"/>
+                                                    <exclude reference="Oml-Hf-uaO"/>
+                                                    <exclude reference="cGm-ji-mVV"/>
                                                     <exclude reference="wc6-AY-q5r"/>
                                                     <exclude reference="LXq-uW-o8y"/>
                                                     <exclude reference="Jxn-VS-PNe"/>

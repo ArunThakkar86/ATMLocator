@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "Reachability.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate (){
+    Reachability* reachability;
+}
 @end
 
 @implementation AppDelegate
@@ -41,5 +43,42 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
++ (BOOL)isServerReachable {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNetworkChange:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    
+    [reachability startNotifier];
+    
+    NetworkStatus remoteHostStatus = [reachability currentReachabilityStatus];
+    
+    if(remoteHostStatus == NotReachable) {
+        NSLog(@"No Internet");
+        return NO;
+    } else if (remoteHostStatus == ReachableViaWiFi) {
+        NSLog(@"Wifi");
+    } else if (remoteHostStatus == ReachableViaWWAN) {
+        NSLog(@"Celular");
+    }
+    return YES;
+}
+
+- (void) handleNetworkChange:(NSNotification *)notice {
+    NetworkStatus remoteHostStatus = [reachability currentReachabilityStatus];
+    
+    if(remoteHostStatus == NotReachable) {
+        NSLog(@"no");
+    } else if (remoteHostStatus == ReachableViaWiFi) {
+        NSLog(@"wifi");
+    } else if (remoteHostStatus == ReachableViaWWAN) {
+        NSLog(@"cell");
+    }
+}
+
 
 @end
