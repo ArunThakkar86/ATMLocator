@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AF385FC61592A62C796F2C6 /* Pods_ATMLocator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADFB6E6381602B6C15B7BB1 /* Pods_ATMLocator.framework */; };
+		869083BD1E850C280053B5AE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 869083BC1E850C280053B5AE /* Reachability.m */; };
 		869EBB551E84EF20007A608B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBB541E84EF20007A608B /* main.m */; };
 		869EBB581E84EF20007A608B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBB571E84EF20007A608B /* AppDelegate.m */; };
 		869EBB5E1E84EF20007A608B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869EBB5C1E84EF20007A608B /* Main.storyboard */; };
@@ -46,9 +48,6 @@
 		869EBBD01E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
 		869EBBD11E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
 		869EBBD21E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
-		869EBBD51E84FBCB007A608B /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBD41E84FBCB007A608B /* ConnectionManager.m */; };
-		869EBBD61E84FBCB007A608B /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBD41E84FBCB007A608B /* ConnectionManager.m */; };
-		869EBBD71E84FBCB007A608B /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBD41E84FBCB007A608B /* ConnectionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4ADFB6E6381602B6C15B7BB1 /* Pods_ATMLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATMLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		869083BB1E850C280053B5AE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Network/Reachability.h; sourceTree = "<group>"; };
+		869083BC1E850C280053B5AE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Network/Reachability.m; sourceTree = "<group>"; };
 		869EBB501E84EF20007A608B /* ATMLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869EBB541E84EF20007A608B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		869EBB561E84EF20007A608B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,8 +108,8 @@
 		869EBBCA1E84F79C007A608B /* ALDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDetailViewController.m; path = Controller/ALDetailViewController.m; sourceTree = "<group>"; };
 		869EBBCE1E84F7C3007A608B /* ALDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDetailViewCell.h; path = View/CustomCell/ALDetailViewCell.h; sourceTree = "<group>"; };
 		869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDetailViewCell.m; path = View/CustomCell/ALDetailViewCell.m; sourceTree = "<group>"; };
-		869EBBD31E84FBCB007A608B /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
-		869EBBD41E84FBCB007A608B /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
+		BE7409471E423AF5D799F043 /* Pods-ATMLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMLocator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATMLocator/Pods-ATMLocator.debug.xcconfig"; sourceTree = "<group>"; };
+		FCF41AE87EFCC36BC645B8FD /* Pods-ATMLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMLocator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATMLocator/Pods-ATMLocator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			files = (
 				869EBBB91E84F6B7007A608B /* CoreLocation.framework in Frameworks */,
 				869EBBB71E84F6A8007A608B /* MapKit.framework in Frameworks */,
+				7AF385FC61592A62C796F2C6 /* Pods_ATMLocator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +140,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		650F6889BE30D8B4C80529AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE7409471E423AF5D799F043 /* Pods-ATMLocator.debug.xcconfig */,
+				FCF41AE87EFCC36BC645B8FD /* Pods-ATMLocator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		869083BA1E850BF40053B5AE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				869083BB1E850C280053B5AE /* Reachability.h */,
+				869083BC1E850C280053B5AE /* Reachability.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		869EBB471E84EF20007A608B = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +167,8 @@
 				869EBB6C1E84EF20007A608B /* ATMLocatorTests */,
 				869EBB771E84EF20007A608B /* ATMLocatorUITests */,
 				869EBB511E84EF20007A608B /* Products */,
+				650F6889BE30D8B4C80529AB /* Pods */,
+				8852AC3A0A50C205A1BE7FF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +185,7 @@
 		869EBB521E84EF20007A608B /* ATMLocator */ = {
 			isa = PBXGroup;
 			children = (
+				869083BA1E850BF40053B5AE /* Network */,
 				869EBB8B1E84F05B007A608B /* Category */,
 				869EBB8A1E84F049007A608B /* Manager */,
 				869EBB891E84F03B007A608B /* Utility */,
@@ -246,8 +270,6 @@
 		869EBB8A1E84F049007A608B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				869EBBD31E84FBCB007A608B /* ConnectionManager.h */,
-				869EBBD41E84FBCB007A608B /* ConnectionManager.m */,
 				869EBB981E84F397007A608B /* ALLocationManager.h */,
 				869EBB991E84F397007A608B /* ALLocationManager.m */,
 				869EBB9D1E84F3BB007A608B /* ALAPIManager.h */,
@@ -278,6 +300,14 @@
 			name = CustomCell;
 			sourceTree = "<group>";
 		};
+		8852AC3A0A50C205A1BE7FF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ADFB6E6381602B6C15B7BB1 /* Pods_ATMLocator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,9 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 869EBB7D1E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocator" */;
 			buildPhases = (
+				6C2D654D003E0312AF70B6DE /* [CP] Check Pods Manifest.lock */,
 				869EBB4C1E84EF20007A608B /* Sources */,
 				869EBB4D1E84EF20007A608B /* Frameworks */,
 				869EBB4E1E84EF20007A608B /* Resources */,
+				A51694880D618E1BD9466A74 /* [CP] Embed Pods Frameworks */,
+				106ECE73F711B9172C60ACE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,6 +436,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		106ECE73F711B9172C60ACE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMLocator/Pods-ATMLocator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C2D654D003E0312AF70B6DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A51694880D618E1BD9466A74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMLocator/Pods-ATMLocator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		869EBB4C1E84EF20007A608B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -416,8 +497,8 @@
 				869EBBA41E84F3E1007A608B /* ALStoryboardManager.m in Sources */,
 				869EBB9A1E84F397007A608B /* ALLocationManager.m in Sources */,
 				869EBBCB1E84F79C007A608B /* ALDetailViewController.m in Sources */,
-				869EBBD51E84FBCB007A608B /* ConnectionManager.m in Sources */,
 				869EBBC61E84F787007A608B /* ALMapViewController.m in Sources */,
+				869083BD1E850C280053B5AE /* Reachability.m in Sources */,
 				869EBBB31E84F652007A608B /* ALATMInfo.m in Sources */,
 				869EBB9F1E84F3BB007A608B /* ALAPIManager.m in Sources */,
 				869EBBA91E84F3FC007A608B /* ALColorManager.m in Sources */,
@@ -437,7 +518,6 @@
 				869EBB6E1E84EF20007A608B /* ATMLocatorTests.m in Sources */,
 				869EBBA01E84F3BB007A608B /* ALAPIManager.m in Sources */,
 				869EBBAA1E84F3FC007A608B /* ALColorManager.m in Sources */,
-				869EBBD61E84FBCB007A608B /* ConnectionManager.m in Sources */,
 				869EBBAF1E84F573007A608B /* ALAppUtility.m in Sources */,
 				869EBBA51E84F3E1007A608B /* ALStoryboardManager.m in Sources */,
 			);
@@ -456,7 +536,6 @@
 				869EBB791E84EF20007A608B /* ATMLocatorUITests.m in Sources */,
 				869EBBA11E84F3BB007A608B /* ALAPIManager.m in Sources */,
 				869EBBAB1E84F3FC007A608B /* ALColorManager.m in Sources */,
-				869EBBD71E84FBCB007A608B /* ConnectionManager.m in Sources */,
 				869EBBB01E84F573007A608B /* ALAppUtility.m in Sources */,
 				869EBBA61E84F3E1007A608B /* ALStoryboardManager.m in Sources */,
 			);
@@ -581,6 +660,7 @@
 		};
 		869EBB7E1E84EF20007A608B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7409471E423AF5D799F043 /* Pods-ATMLocator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ATMLocator/Info.plist;
@@ -592,6 +672,7 @@
 		};
 		869EBB7F1E84EF20007A608B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCF41AE87EFCC36BC645B8FD /* Pods-ATMLocator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ATMLocator/Info.plist;
@@ -666,6 +747,7 @@
 				869EBB7F1E84EF20007A608B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		869EBB801E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocatorTests" */ = {
 			isa = XCConfigurationList;
@@ -674,6 +756,7 @@
 				869EBB821E84EF20007A608B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		869EBB831E84EF20007A608B /* Build configuration list for PBXNativeTarget "ATMLocatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -682,6 +765,7 @@
 				869EBB851E84EF20007A608B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
