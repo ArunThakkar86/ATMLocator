@@ -15,6 +15,9 @@
 		57E9B041CC1D8988C38DDC97CAEFCD76 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B46DBFF3A36C2A3BFA5CD06A1960E97F /* MBProgressHUD-dummy.m */; };
 		7309E1410EB3605FA50327D640B434F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */; };
 		7D8DC3BE9ED8CD9F9114224C156D4A0B /* Pods-ATMLocator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADD546F37F7AD5771151BABDDB5590 /* Pods-ATMLocator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		866E0A251E857907008E3847 /* ConnectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 866E0A211E857907008E3847 /* ConnectionManager.h */; };
+		866E0A261E857907008E3847 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E0A221E857907008E3847 /* ConnectionManager.m */; };
+		866E0A271E857907008E3847 /* NetworkConnectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 866E0A241E857907008E3847 /* NetworkConnectionManager.h */; };
 		A27FB4460EEB75C8FF69AD209210C0BA /* NetworkConnectionManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E83C291F6F40E329E45E3D6B065026 /* NetworkConnectionManager-dummy.m */; };
 		A3C0B8170663FBC8DF5E062080B2629E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
 		AA00DCC0C8174B2D7E48EEC3C768B047 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC88E9BB2DAE98E2B831183A06BFB8C /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -43,13 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03938AD3C363EB86F9AFF92FE5B4CDDE /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03938AD3C363EB86F9AFF92FE5B4CDDE /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EAFA92D1BF8565BA06CF667316FC94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AF20DC59AF44572F6AEADE6D8CCC702 /* Pods-ATMLocator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATMLocator-dummy.m"; sourceTree = "<group>"; };
 		1FB930F897EA2605AE4A73D0B7FAF588 /* Pods-ATMLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATMLocator.debug.xcconfig"; sourceTree = "<group>"; };
-		35ABEF00D4644ADF753D62C1C8D831E6 /* NetworkConnectionManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NetworkConnectionManager.framework; path = NetworkConnectionManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C02D7DF743B1C4299496EB5D5263144 /* Pods-ATMLocator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ATMLocator.modulemap"; sourceTree = "<group>"; };
-		45F7B1ADFBAA5AD7174555013C33C5A8 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		35ABEF00D4644ADF753D62C1C8D831E6 /* NetworkConnectionManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkConnectionManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C02D7DF743B1C4299496EB5D5263144 /* Pods-ATMLocator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ATMLocator.modulemap"; sourceTree = "<group>"; };
+		45F7B1ADFBAA5AD7174555013C33C5A8 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		4C1EE4B97D02463CB7C4D4F85F068867 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		53C6BBF77B3F2F6ABC387541C4CA72FE /* Pods-ATMLocator-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ATMLocator-resources.sh"; sourceTree = "<group>"; };
@@ -59,10 +62,14 @@
 		695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		792165F2CA033667D6F57205316D40A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7973D94781E6AF5232BF5AC961C19D12 /* NetworkConnectionManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetworkConnectionManager-umbrella.h"; sourceTree = "<group>"; };
+		866E0A211E857907008E3847 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = NetworkConnectionManager/ConnectionManager.h; sourceTree = "<group>"; };
+		866E0A221E857907008E3847 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = NetworkConnectionManager/ConnectionManager.m; sourceTree = "<group>"; };
+		866E0A231E857907008E3847 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = NetworkConnectionManager/LICENSE; sourceTree = "<group>"; };
+		866E0A241E857907008E3847 /* NetworkConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkConnectionManager.h; path = NetworkConnectionManager/NetworkConnectionManager.h; sourceTree = "<group>"; };
 		8C6450EFA8005FCEA4D848A92E03B250 /* Pods-ATMLocator-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATMLocator-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8CC88E9BB2DAE98E2B831183A06BFB8C /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		93723AFFFA5B1FD3B0041C2B31164EB8 /* NetworkConnectionManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NetworkConnectionManager.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93723AFFFA5B1FD3B0041C2B31164EB8 /* NetworkConnectionManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NetworkConnectionManager.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A83C101219E7ED4222CD65BCE24B0A5E /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		A947F20528240D6B71DD10DA4AA5D9FA /* NetworkConnectionManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetworkConnectionManager-prefix.pch"; sourceTree = "<group>"; };
 		AA017EC2D003240DFB08F82E85BDDD60 /* Pods-ATMLocator-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ATMLocator-frameworks.sh"; sourceTree = "<group>"; };
@@ -71,7 +78,7 @@
 		CEADD546F37F7AD5771151BABDDB5590 /* Pods-ATMLocator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATMLocator-umbrella.h"; sourceTree = "<group>"; };
 		DD71A7E2391B90C816D7330BB6B999E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24316B44EFAB902E8868F2B49BB4E3C /* Pods-ATMLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATMLocator.release.xcconfig"; sourceTree = "<group>"; };
-		E58FFA57B2BBAFB2C8266D5328C1A447 /* Pods_ATMLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ATMLocator.framework; path = "Pods-ATMLocator.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E58FFA57B2BBAFB2C8266D5328C1A447 /* Pods_ATMLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATMLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E83C291F6F40E329E45E3D6B065026 /* NetworkConnectionManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NetworkConnectionManager-dummy.m"; sourceTree = "<group>"; };
 		EA7EF56646DB1B2F653740B0FB77850B /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		EACDC108B5BB50FCD2778BBCDF9A9B06 /* ConnectionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
@@ -180,6 +187,7 @@
 		5836A44A75C427EBF4739C55E2315758 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				866E0A201E8578CA008E3847 /* NetworkConnectionManager */,
 				9841862FE02BD09196B31E3026B4325C /* MBProgressHUD */,
 			);
 			name = Pods;
@@ -205,6 +213,17 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		866E0A201E8578CA008E3847 /* NetworkConnectionManager */ = {
+			isa = PBXGroup;
+			children = (
+				866E0A211E857907008E3847 /* ConnectionManager.h */,
+				866E0A221E857907008E3847 /* ConnectionManager.m */,
+				866E0A231E857907008E3847 /* LICENSE */,
+				866E0A241E857907008E3847 /* NetworkConnectionManager.h */,
+			);
+			name = NetworkConnectionManager;
+			sourceTree = "<group>";
+		};
 		9841862FE02BD09196B31E3026B4325C /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +231,6 @@
 				8CC88E9BB2DAE98E2B831183A06BFB8C /* MBProgressHUD.m */,
 				A965BDBE5FC4856535619D751B2F0F38 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -247,7 +265,6 @@
 				BFC2EC991B46B3064BEE4046E97A8C35 /* ConnectionManager.m */,
 				63A6FE15A7324084D8ACA61C72994041 /* NetworkConnectionManager.h */,
 			);
-			name = NetworkConnectionManager;
 			path = NetworkConnectionManager;
 			sourceTree = "<group>";
 		};
@@ -268,6 +285,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				866E0A251E857907008E3847 /* ConnectionManager.h in Headers */,
+				866E0A271E857907008E3847 /* NetworkConnectionManager.h in Headers */,
 				B646C96E2D7DF54445B3719F800D79E9 /* MBProgressHUD-umbrella.h in Headers */,
 				D206EDC84CE44D5DC711ADD087BC4B17 /* MBProgressHUD.h in Headers */,
 			);
@@ -379,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				866E0A261E857907008E3847 /* ConnectionManager.m in Sources */,
 				57E9B041CC1D8988C38DDC97CAEFCD76 /* MBProgressHUD-dummy.m in Sources */,
 				AA00DCC0C8174B2D7E48EEC3C768B047 /* MBProgressHUD.m in Sources */,
 			);
