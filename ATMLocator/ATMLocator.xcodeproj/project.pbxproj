@@ -48,7 +48,7 @@
 		869EBBD01E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
 		869EBBD11E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
 		869EBBD21E84F7C3007A608B /* ALDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */; };
-		86B2DC8C1E859305005DF1D6 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B2DC8B1E859305005DF1D6 /* ConnectionManager.m */; };
+		F466D6D71E960DD100F1AF1C /* APIManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F466D6D11E960D0300F1AF1C /* APIManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 869EBB4F1E84EF20007A608B;
 			remoteInfo = ATMLocator;
+		};
+		F466D6D01E960D0300F1AF1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F466D6CB1E960D0300F1AF1C /* APIManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F466D6631E9607AC00F1AF1C;
+			remoteInfo = APIManager;
+		};
+		F466D6D21E960D0300F1AF1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F466D6CB1E960D0300F1AF1C /* APIManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F466D66C1E9607AC00F1AF1C;
+			remoteInfo = APIManagerTests;
+		};
+		F466D6D51E960DA600F1AF1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F466D6CB1E960D0300F1AF1C /* APIManager.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F466D6621E9607AC00F1AF1C;
+			remoteInfo = APIManager;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -124,8 +145,7 @@
 		869EBBCA1E84F79C007A608B /* ALDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDetailViewController.m; path = Controller/ALDetailViewController.m; sourceTree = "<group>"; };
 		869EBBCE1E84F7C3007A608B /* ALDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDetailViewCell.h; path = View/CustomCell/ALDetailViewCell.h; sourceTree = "<group>"; };
 		869EBBCF1E84F7C3007A608B /* ALDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDetailViewCell.m; path = View/CustomCell/ALDetailViewCell.m; sourceTree = "<group>"; };
-		86B2DC8A1E859305005DF1D6 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = Manager/ConnectionManager.h; sourceTree = "<group>"; };
-		86B2DC8B1E859305005DF1D6 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = Manager/ConnectionManager.m; sourceTree = "<group>"; };
+		F466D6CB1E960D0300F1AF1C /* APIManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APIManager.xcodeproj; path = APIManager/APIManager.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F466D6D71E960DD100F1AF1C /* APIManager.framework in Frameworks */,
 				869EBBB91E84F6B7007A608B /* CoreLocation.framework in Frameworks */,
 				869EBBB71E84F6A8007A608B /* MapKit.framework in Frameworks */,
 				7AF385FC61592A62C796F2C6 /* Pods_ATMLocator.framework in Frameworks */,
@@ -177,6 +198,7 @@
 		869EBB471E84EF20007A608B = {
 			isa = PBXGroup;
 			children = (
+				F466D6CB1E960D0300F1AF1C /* APIManager.xcodeproj */,
 				869EBBB81E84F6B7007A608B /* CoreLocation.framework */,
 				869EBBB61E84F6A8007A608B /* MapKit.framework */,
 				869EBB521E84EF20007A608B /* ATMLocator */,
@@ -286,8 +308,6 @@
 		869EBB8A1E84F049007A608B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				86B2DC8A1E859305005DF1D6 /* ConnectionManager.h */,
-				86B2DC8B1E859305005DF1D6 /* ConnectionManager.m */,
 				869EBB981E84F397007A608B /* ALLocationManager.h */,
 				869EBB991E84F397007A608B /* ALLocationManager.m */,
 				869EBB9D1E84F3BB007A608B /* ALAPIManager.h */,
@@ -326,6 +346,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F466D6CC1E960D0300F1AF1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F466D6D11E960D0300F1AF1C /* APIManager.framework */,
+				F466D6D31E960D0300F1AF1C /* APIManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,6 +373,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F466D6D61E960DA600F1AF1C /* PBXTargetDependency */,
 			);
 			name = ATMLocator;
 			productName = ATMLocator;
@@ -420,6 +450,12 @@
 			mainGroup = 869EBB471E84EF20007A608B;
 			productRefGroup = 869EBB511E84EF20007A608B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F466D6CC1E960D0300F1AF1C /* Products */;
+					ProjectRef = F466D6CB1E960D0300F1AF1C /* APIManager.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				869EBB4F1E84EF20007A608B /* ATMLocator */,
@@ -428,6 +464,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F466D6D11E960D0300F1AF1C /* APIManager.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = APIManager.framework;
+			remoteRef = F466D6D01E960D0300F1AF1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F466D6D31E960D0300F1AF1C /* APIManagerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = APIManagerTests.xctest;
+			remoteRef = F466D6D21E960D0300F1AF1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		869EBB4E1E84EF20007A608B /* Resources */ = {
@@ -514,7 +567,6 @@
 				869EBB581E84EF20007A608B /* AppDelegate.m in Sources */,
 				869EBB551E84EF20007A608B /* main.m in Sources */,
 				869EBBAE1E84F573007A608B /* ALAppUtility.m in Sources */,
-				86B2DC8C1E859305005DF1D6 /* ConnectionManager.m in Sources */,
 				869EBBA41E84F3E1007A608B /* ALStoryboardManager.m in Sources */,
 				869EBB9A1E84F397007A608B /* ALLocationManager.m in Sources */,
 				869EBBCB1E84F79C007A608B /* ALDetailViewController.m in Sources */,
@@ -574,6 +626,11 @@
 			isa = PBXTargetDependency;
 			target = 869EBB4F1E84EF20007A608B /* ATMLocator */;
 			targetProxy = 869EBB751E84EF20007A608B /* PBXContainerItemProxy */;
+		};
+		F466D6D61E960DA600F1AF1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = APIManager;
+			targetProxy = F466D6D51E960DA600F1AF1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

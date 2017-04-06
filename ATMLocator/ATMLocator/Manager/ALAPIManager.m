@@ -12,7 +12,7 @@
 #import "ALAPIManager.h"
 #import "ALATMInfo.h"
 #import "ALAppUtility.h"
-#import "ConnectionManager.h"
+#import <APIManager/ConnectionManager.h>
 
 
 @implementation ALAPIManager
